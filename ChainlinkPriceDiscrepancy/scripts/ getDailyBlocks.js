@@ -6,13 +6,13 @@ const { Network, Alchemy } = require('alchemy-sdk');
 const EthDater = require('ethereum-block-by-date');
 const { Web3 } = require('web3');
 
+require("dotenv").config();
 
 
 const settings = {
-    apiKey: 'w4iGdDwlbhkAWygEmNbqElo0hTZWCa-s',
-    apiURL: 'https://eth-mainnet.g.alchemy.com/v2/w4iGdDwlbhkAWygEmNbqElo0hTZWCa-s',
+    apiKey: process.env.apiKey, 
+    apiURL: process.env.apiURL, 
     network: Network.ETH_MAINNET,
-
 };
 
 const alchemy = new Alchemy(settings);
